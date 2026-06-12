@@ -1,5 +1,7 @@
 # Sync Codex History Provider
 
+[English](README.md) | [简体中文](README.zh-CN.md)
+
 Restore missing local Codex chat history after switching API keys, base URLs, or custom model providers.
 
 This repository contains a Codex skill plus a standalone migration script. It is useful when the VS Code Codex extension or Codex UI suddenly shows only new conversations after changing `model_provider`, even though older history files still exist under `~/.codex`.
