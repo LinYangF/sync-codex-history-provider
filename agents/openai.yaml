@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sync Codex History Provider"
+  short_description: "Restore Codex history after provider changes"
+  default_prompt: "Sync my missing Codex history after changing API provider."
