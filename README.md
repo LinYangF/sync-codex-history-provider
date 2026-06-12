@@ -143,4 +143,4 @@ scripts/sync_codex_history_provider.py
 
 ## License
 
-No license has been selected yet. Add one before inviting broad reuse or contributions.
+MIT License. See [LICENSE](LICENSE).

@@ -149,4 +149,4 @@ scripts/sync_codex_history_provider.py
 
 ## License
 
-暂时还没有选择 license。如果希望大家正式复用或贡献，建议后续添加一个开源许可证。
+MIT License。详见 [LICENSE](LICENSE)。
