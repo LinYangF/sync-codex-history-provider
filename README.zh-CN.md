@@ -15,7 +15,7 @@ Codex 的本地对话通常保存为 `rollout-*.jsonl` 文件，位于：
 ~/.codex/archived_sessions/
 ```
 
-每个对话文件里都有一个 `session_meta.payload.model_provider` 字段。切换 provider 后，例如从 `api_key` 切到 `openai-custom`，旧对话可能仍然标记为旧 provider。某些 Codex 界面会只展示当前 provider 下的对话，于是旧历史看起来就像“消失了”。
+每个对话文件里都有一个 `session_meta.payload.model_provider` 字段。切换 provider 后，例如从 `api_key1` 切到 `api_key2`，旧对话可能仍然标记为旧 provider。某些 Codex 界面会只展示当前 provider 下的对话，于是旧历史看起来就像“消失了”。
 
 这个工具会更新本地元数据，让旧对话重新归属到当前 provider。
 
@@ -73,7 +73,7 @@ python3 scripts/sync_codex_history_provider.py --codex-home ~/.codex --apply
 不从 `config.toml` 读取，而是手动指定目标 provider：
 
 ```bash
-python3 scripts/sync_codex_history_provider.py --provider openai-custom --apply
+python3 scripts/sync_codex_history_provider.py --provider api_key2 --apply
 ```
 
 应用迁移后终止本地 `codex app-server` 进程，让 VS Code 扩展重新加载状态：
@@ -86,15 +86,15 @@ python3 scripts/sync_codex_history_provider.py --apply --restart-app-server
 
 ```text
 CODEX_HOME: /home/sun/.codex
-Target provider: openai-custom
+Target provider: api_key2
 Mode: dry-run
 
 JSONL providers before:
-  api_key: 71
-  openai-custom: 1
+  api_key1: 71
+  api_key2: 1
 SQLite providers before:
-  api_key: 59
-  openai-custom: 1
+  api_key1: 59
+  api_key2: 1
 
 JSONL records to update: 71 in 59 files
 SQLite threads to update: 59

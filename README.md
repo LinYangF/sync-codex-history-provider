@@ -15,7 +15,7 @@ Codex stores local conversations as `rollout-*.jsonl` files under:
 ~/.codex/archived_sessions/
 ```
 
-Each conversation has a `session_meta.payload.model_provider` value. After switching providers, for example from `api_key` to `openai-custom`, old conversations may still be tagged with the previous provider. Some Codex surfaces then show only conversations for the current provider, making older history look missing.
+Each conversation has a `session_meta.payload.model_provider` value. After switching providers, for example from `api_key1` to `api_key2`, old conversations may still be tagged with the previous provider. Some Codex surfaces then show only conversations for the current provider, making older history look missing.
 
 This tool updates the local metadata so old conversations belong to the current provider again.
 
@@ -67,7 +67,7 @@ python3 scripts/sync_codex_history_provider.py --codex-home ~/.codex --apply
 Force a target provider instead of reading `config.toml`:
 
 ```bash
-python3 scripts/sync_codex_history_provider.py --provider openai-custom --apply
+python3 scripts/sync_codex_history_provider.py --provider api_key2 --apply
 ```
 
 Apply and terminate local `codex app-server` processes so the VS Code extension reloads state:
@@ -80,15 +80,15 @@ python3 scripts/sync_codex_history_provider.py --apply --restart-app-server
 
 ```text
 CODEX_HOME: /home/sun/.codex
-Target provider: openai-custom
+Target provider: api_key2
 Mode: dry-run
 
 JSONL providers before:
-  api_key: 71
-  openai-custom: 1
+  api_key1: 71
+  api_key2: 1
 SQLite providers before:
-  api_key: 59
-  openai-custom: 1
+  api_key1: 59
+  api_key2: 1
 
 JSONL records to update: 71 in 59 files
 SQLite threads to update: 59
