@@ -1,4 +1,4 @@
-# Sync Codex History Provider
+# Fix Missing Codex Chat History After API Provider Switch
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 

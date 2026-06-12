@@ -3,7 +3,7 @@ name: sync-codex-history-provider
 description: Restore missing local Codex or VS Code Codex extension chat history after changing API keys, model providers, base URLs, or custom provider names. Use when old local conversations still exist under CODEX_HOME but the Codex UI only shows conversations for the current provider, or when Codex history needs provider metadata migrated across ~/.codex/sessions, archived_sessions, and state_5.sqlite.
 ---
 
-# Sync Codex History Provider
+# Fix Missing Codex Chat History After API Provider Switch
 
 ## Overview
 

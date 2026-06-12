@@ -1,4 +1,4 @@
-# Sync Codex History Provider
+# 修复切换 API Provider 后 Codex 聊天记录消失
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
