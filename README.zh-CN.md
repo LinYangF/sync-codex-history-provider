@@ -29,6 +29,18 @@ Codex 的本地对话通常保存为 `rollout-*.jsonl` 文件，位于：
 
 ## 安装为 Codex Skill
 
+### 自然语言安装
+
+如果你不熟悉“把仓库克隆到 Codex skills 目录”这一步，可以直接打开 Codex，然后粘贴下面这段话：
+
+```text
+请把这个 Codex skill 从 https://github.com/LinYangF/sync-codex-history-provider 安装到我的本地 Codex skills 目录，然后先用 dry-run 模式运行它的同步脚本。如果输出看起来正确，再询问我是否应用迁移。
+```
+
+Codex 可以帮你把仓库克隆到正确位置，和你一起检查 dry-run 输出，然后在你确认后再执行真正的迁移。
+
+### 手动安装
+
 把仓库克隆到你的 Codex skills 目录：
 
 ```bash

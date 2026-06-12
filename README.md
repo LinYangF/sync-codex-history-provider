@@ -29,6 +29,18 @@ This tool updates the local metadata so old conversations belong to the current 
 
 ## Install As A Codex Skill
 
+### Natural Language Install
+
+If you are not comfortable cloning into the Codex skills directory manually, open Codex and paste this:
+
+```text
+Please install this Codex skill from https://github.com/LinYangF/sync-codex-history-provider into my local Codex skills directory, then run its sync script in dry-run mode first. If the output looks correct, ask me before applying the migration.
+```
+
+Codex can clone the repository into the right location, inspect the dry-run output with you, and then apply the migration after you confirm.
+
+### Manual Install
+
 Clone the repository into your Codex skills directory:
 
 ```bash
